@@ -28,15 +28,15 @@ Clone this repository to get started and run the API server and development serv
 npm run dev
 ```
 
-**`/global?locale=en|pt`**
+**`/global?locale={en|pt}`**
 
 The global route returns an object filtered by locale param to generate common components of the layout: header, footer, and social links.
 
-**`/pages?locale=en|pt`**
+**`/pages?locale={en|pt}`**
 
 The pages route returns an array of pages filtered by locale param, meaning the front-end should seamlessly render whichever pages are returned from the API.
 
-**`/pages?locale=en|pt&slug=home`**
+**`/pages?locale={en|pt}&slug={home}`**
 
 The pages route with the slug param returns a specific page corresponding to the provided slug.
 
