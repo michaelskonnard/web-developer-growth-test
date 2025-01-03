@@ -16,7 +16,7 @@ const server = http.createServer((req, res) => {
   res.setHeader("Access-Control-Max-Age", 2592000);
 
   const parsedUrl = url.parse(req.url, true);
-  const locale = parsedUrl.query.locale || "en";
+  const locale = parsedUrl.query.locale;
 
   let data;
 
@@ -27,16 +27,16 @@ const server = http.createServer((req, res) => {
   if (req.url.startsWith("/pages")) {
     const slug = parsedUrl.query.slug;
 
-    if (slug === "" || slug) {
-      data = findBySlug(payload.pages, locale, slug);
+    if (slug) {
+      data = findBySlug(payload.pages, locale || "en", slug);
     } else {
-      data = filterByLocale(payload.pages, locale);
+      data = locale ? filterByLocale(payload.pages, locale) : payload.pages;
     }
   }
 
   if (!data) {
     res.statusCode = 404;
-    res.end(JSON.stringify({ message: "Not found" }));
+    data = { message: "Not found" };
   }
 
   res.end(JSON.stringify(data));
