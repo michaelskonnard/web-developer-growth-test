@@ -1,0 +1,109 @@
+@use "@/styles/spacing";
+@use "@/styles/colors";
+@use "@/styles/typography";
+@use "@/styles/breakpoints";
+
+.footerContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 80px 0;
+}
+
+.copyrightSection {
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px solid colors.$color-text-primary-25-percent;
+	padding-top: spacing.$spacing-32;
+	padding-bottom: 80px;
+}
+
+.helpText {
+	color: colors.$color-text-primary-60-percent;
+	line-height: typography.$line-height-xsm;
+	font-size: typography.$font-size-md;
+	font-weight: typography.$font-weight-medium;
+	letter-spacing: 0;
+}
+
+.footerTitle {
+	gap: spacing.$spacing-12;
+}
+
+.leftFooter {
+	gap: spacing.$spacing-32;
+	display: flex;
+	flex-direction: column;
+}
+
+.rightFooter {
+	padding-top: spacing.$spacing-16;
+	gap: spacing.$spacing-40;
+	display: flex;
+	flex-direction: column;
+}
+
+.rightFooterMenu {
+	display: flex;
+}
+
+.dropdownContainer {
+	padding-inline-start: 0;
+	margin: 0;
+}
+
+.columnContainer {
+	width: 160px;
+}
+
+.columnHeader {
+	color: colors.$color-text-primary-60-percent;
+	text-transform: uppercase;
+	line-height: typography.$line-height-xsm;
+	font-size: typography.$font-size-sm;
+	font-weight: 600;
+	letter-spacing: 2.8px;
+	padding-bottom: spacing.$spacing-16;
+}
+
+.dropdownItem {
+	list-style: none;
+	padding-bottom: spacing.$spacing-16;
+}
+
+.link {
+	color: colors.$color-text-primary-60-percent;
+	line-height: typography.$line-height-xsm;
+	font-size: typography.$font-size-md;
+	font-weight: 600;
+	letter-spacing: 0;
+	text-decoration: none;
+}
+
+.systemStatusContainer {
+	display: flex;
+	align-items: center;
+	gap: spacing.$spacing-4;
+}
+
+.systemStatusTypography {
+	color: colors.$color-text-primary-60-percent;
+	line-height: typography.$line-height-xsm;
+	font-size: typography.$font-size-sm;
+	font-weight: typography.$font-weight-medium;
+	letter-spacing: 0;
+}
+
+.greenText {
+	color: colors.$color-green-positive;
+}
+
+@media only screen and (min-width: breakpoints.$desktop) {
+	.footerContainer {
+		flex-direction: row;
+	}
+
+	.rightFooter {
+		flex-direction: row;
+	}
+}

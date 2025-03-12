@@ -1,0 +1,40 @@
+@use "@/styles/spacing";
+
+.centeredCtaWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: spacing.$spacing-40;
+	padding: 80px spacing.$spacing-16;
+	background: #212121;
+	text-align: center;
+}
+
+.button {
+	all: unset;
+}
+
+.heading {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: spacing.$spacing-16;
+}
+
+.title {
+	font-size: 48px;
+	line-height: 48px;
+	letter-spacing: 0;
+	text-align: center;
+	font-weight: 500;
+	max-width: 742px;
+}
+
+.description {
+	font-size: 18px;
+	line-height: 120%;
+	letter-spacing: 0;
+	text-align: center;
+	font-weight: 500;
+	max-width: 742px;
+	color: #737373;
+}

@@ -1,0 +1,23 @@
+@use "@/styles/spacing";
+
+.cardWrapper {
+	display: flex;
+	flex-direction: column;
+	width: 381px;
+	gap: spacing.$spacing-16;
+}
+
+.title {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 120%;
+	letter-spacing: 0;
+}
+
+.description {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 120%;
+	letter-spacing: 0;
+	color: #858585;
+}

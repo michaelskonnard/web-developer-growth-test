@@ -1,0 +1,9 @@
+@use "@/styles/colors";
+
+.activeNavItem {
+	color: colors.$color-text-primary;
+}
+
+.inactiveNavItem {
+	color: colors.$color-text-inactive;
+}

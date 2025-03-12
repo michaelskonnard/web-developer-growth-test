@@ -1,0 +1,20 @@
+@use "@/styles/spacing";
+@use "@/styles/colors";
+
+
+.solidButton {
+	all: unset;
+	cursor: pointer;
+	padding: spacing.$spacing-12 spacing.$spacing-24;
+	border-radius: spacing.$spacing-12;
+	background: #1040FF;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 120%;
+	letter-spacing: 0;
+	color: colors.$color-text-primary;
+}
+
+.link {
+	all: unset;
+}

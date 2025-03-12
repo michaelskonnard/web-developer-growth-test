@@ -1,0 +1,6 @@
+@use "@/styles/spacing";
+
+.socialLinksWrapper {
+	display: flex;
+	gap: spacing.$spacing-24;
+}

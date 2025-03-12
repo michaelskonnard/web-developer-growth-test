@@ -1,0 +1,28 @@
+@use "@/styles/spacing";
+
+//@keyframes scroll {
+//	0% {
+//		transform: translateX(0);
+//	}
+//	100% {
+//		transform: translateX(-100%);
+//	}
+//}
+//
+//.animateScroll {
+//	display: flex;
+//	animation: scroll 10s linear infinite;
+//}
+
+.brandsWrapper {
+	display: flex;
+	justify-content: center;
+	gap: spacing.$spacing-40;
+	padding-bottom: spacing.$spacing-40;
+	overflow: hidden;
+	left: 20px;
+}
+
+.brandImage {
+	width: auto;
+}

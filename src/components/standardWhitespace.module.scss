@@ -1,0 +1,20 @@
+@use "@/styles/breakpoints.scss";
+@use "@/styles/spacing.scss";
+
+.wrapper {
+	margin: 0 auto;
+	padding: spacing.$spacing-16;
+}
+
+@media only screen and (min-width: breakpoints.$tablet) {
+	.wrapper {
+		padding: 0 spacing.$spacing-40;
+	}
+}
+
+@media only screen and (min-width: breakpoints.$desktop) {
+	.wrapper {
+		padding: 0 spacing.$spacing-64;
+		max-width: breakpoints.$desktop - (spacing.$spacing-64 * 2);
+	}
+}

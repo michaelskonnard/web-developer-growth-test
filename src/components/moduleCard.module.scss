@@ -1,0 +1,42 @@
+@use "@/styles/spacing";
+
+.moduleCardWrapper {
+	display: flex;
+	flex-direction: column;
+	width: 377px;
+	background: #212121;
+	padding: 20px;
+	border-radius: spacing.$spacing-16;
+}
+
+.heading {
+	display: flex;
+	flex-direction: column;
+	gap: spacing.$spacing-12;
+	font-weight: 500;
+	line-height: 120%;
+	letter-spacing: 0;
+}
+
+.linkContainer {
+	padding-top: spacing.$spacing-32;
+	font-size: 16px;
+	color: #75A5FF;
+}
+
+.link {
+	all: unset;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.title {
+	font-size: 20px;
+}
+
+.description {
+	font-size: 16px;
+	color: #A8A8A8;
+}

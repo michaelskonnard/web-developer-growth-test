@@ -1,0 +1,65 @@
+@use "@/styles/spacing";
+@use "@/styles/colors";
+@use "@/styles/typography";
+@use "@/styles/breakpoints";
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	padding: spacing.$spacing-32;
+
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	gap: spacing.$spacing-8;
+	font-weight: typography.$font-weight-medium;
+}
+
+.navLinks {
+	display: none;
+}
+
+.loginButtonContainer {
+	display: none;
+}
+
+.loginButton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.menuButton {
+	background: none;
+	border: none;
+	color: colors.$color-text-primary;
+	cursor: pointer;
+}
+
+@media (min-width: breakpoints.$tablet) {
+	.loginButtonContainer {
+		display: block;
+		background: none;
+		border: none;
+		color: colors.$color-text-primary;
+		cursor: pointer;
+	}
+
+	.menuButton {
+		display: none;
+	}
+
+	.navLinks {
+		display: flex;
+		gap: spacing.$spacing-32;
+	}
+
+	.navLinks a {
+		text-decoration: none;
+		font-size: typography.$font-size-sm;
+	}
+}
