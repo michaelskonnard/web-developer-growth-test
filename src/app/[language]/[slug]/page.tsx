@@ -2,7 +2,7 @@ import {getAllPages, getPageDataFromLanguageAndSlug} from "@/utils/pageUtils";
 import {Page} from "@/model/Page";
 import cmsToComponentMap from "@/data/cmsToComponentMap";
 
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<PageProps[]> {
   const pages = await getAllPages();
 
   const paths = pages.map((page: Page) => {
@@ -12,8 +12,18 @@ export async function generateStaticParams() {
   return paths.filter(path => path.language !== "en");
 }
 
-export default async function PageContent({ params }: { params: { language: string; slug: string } } ) {
-  const { language, slug } = params; // ✅ Destructure inside the function
+type PageProps = {
+  language: string;
+  slug: string;
+}
+
+type Params = {
+  params: PageProps;
+}
+
+
+export default async function PageContent({ params }: Params) {
+  const { language, slug } = params;
 
   const page = new Page(await getPageDataFromLanguageAndSlug(language ?? "", slug ?? ""));
   const { contentSections } = page;
