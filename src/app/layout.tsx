@@ -5,6 +5,7 @@ import React from "react";
 import {Global} from "@/model/Global";
 import getGlobalData from "@/utils/globalUtils";
 
+import "@/styles/global.css";
 import styles from "./layout.module.scss";
 
 export const metadata: Metadata = {
